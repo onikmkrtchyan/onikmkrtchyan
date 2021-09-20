@@ -95,16 +95,11 @@ class MST {
     /**
      * Function that checks,does give graph is square grid or not:
      *
-     * @param length           length of square grid
-     * @param width            width of square grid
-     * @param quantityEdges    quantity of edges of square grid
-     * @param quantityVertices quantity of vertices of square grid
      * @return trues if given graph is square grid
      */
-    boolean checkingSquareGridElse(int length, int width, int quantityEdges,
-                                   int quantityVertices) {
-        return width * length == quantityVertices ||
-                (length * (width - 1) + width * (length - 1) == quantityEdges);
+    boolean checkingSquareGridElse() {
+        return MST.W * MST.L == MST.quantityVertices ||
+                (MST.L * (MST.W - 1) + MST.W * (MST.L - 1) == MST.quantityEdges);
     }
 
     /**
@@ -243,7 +238,7 @@ class MST {
     public static void main(String[] args) throws Exception {
         MST mst = new MST();
         if (mst.checkingSquareGrid(mst.fileRead()) && mst.checkingSquareGridElse
-                (L, W, quantityEdges, quantityVertices)) {
+                ()) {
             System.out.println("The Width of square grid is " + W);
             System.out.println("The Length of square grid is " + L);
             System.out.println("The Quantity of Edges in square grid is " + quantityEdges);
