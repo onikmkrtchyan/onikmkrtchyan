@@ -32,7 +32,7 @@ class MST {
     public static int[] findLengthAndWidth() {
         FileReader file = null;
         try {
-            file = new FileReader("/home/onik/Downloads/file.txt");
+            file = new FileReader("/home/onik/IdeaProjects/file.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -66,7 +66,7 @@ class MST {
      * @throws Exception File not found
      */
     int[][] fileRead() throws Exception {
-        FileReader file = new FileReader("/home/onik/Downloads/file.txt");
+        FileReader file = new FileReader("/home/onik/IdeaProjects/file.txt");
         int[] integers = new int[3 * (L * (W - 1) + W * (L - 1))];
         int k = 0;
         try {
